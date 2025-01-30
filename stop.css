@@ -1,0 +1,112 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* Background Styling */
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: url('stopwatch.jpg') no-repeat center center/cover;
+    backdrop-filter: blur(2px); /* Slight blur for aesthetic */
+}
+
+/* Stopwatch Container */
+.stopwatch {
+    text-align: center;
+    background: linear-gradient(to bottom, #9d3d3d, #9a9caf);
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(241, 15, 192, 0.2);
+    max-width: 350px;
+    width: 90%;
+}
+
+/* Timer Display */
+#display {
+    font-size: 50px;
+    font-weight: bold;
+    color: #2887ad;
+    margin: 20px 0;
+    transition: all 0.3s ease-in-out;
+}
+
+/* Timer Running Animation */
+.running {
+    animation: glow 1s infinite alternate;
+}
+
+@keyframes glow {
+    from {
+        color: #5b178f;
+        text-shadow: 0 0 5px rgba(0, 255, 0, 0.5);
+    }
+    to {
+        color: #1e90ff;
+        text-shadow: 0 0 15px rgba(30, 144, 255, 0.7);
+    }
+}
+
+/* Buttons Styling */
+.controls button {
+    margin: 8px;
+    padding: 12px 20px;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+/* Start Button */
+#start {
+    background: #28a745;
+    color: white;
+}
+#start:hover {
+    background: #218838;
+    transform: scale(1.1);
+}
+
+/* Stop Button */
+#stop {
+    background: #dc3545;
+    color: white;
+}
+#stop:hover {
+    background: #c82333;
+    transform: scale(1.1);
+}
+
+/* Reset Button */
+#reset {
+    background: #ffc107;
+    color: black;
+}
+#reset:hover {
+    background: #e0a800;
+    transform: scale(1.1);
+}
+
+/* Lap List */
+ul {
+    list-style-type: none;
+    padding: 0;
+    margin-top: 20px;
+    max-height: 150px;
+    overflow-y: auto;
+}
+
+li {
+    padding: 8px;
+    background: rgba(0, 0, 0, 0.1);
+    margin: 5px 0;
+    border-radius: 5px;
+    font-size: 16px;
+}
